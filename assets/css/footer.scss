@@ -1,0 +1,53 @@
+@use "variables";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 22px 25px;
+    gap: 16px;
+    background: variables.$color--grey;
+
+    &__title {
+        color: variables.$color--white;
+        font-family: variables.$font--shrikhand;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+
+        &-link {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 12px;
+
+            &-i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 11px;
+                height: 13px;
+                color: variables.$color--white;
+            }
+
+            &-text {
+                color: variables.$color--white;
+                font-family: variables.$font--roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+}

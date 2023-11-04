@@ -1,0 +1,89 @@
+@use "variables";
+
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    background: variables.$color--background;
+    gap: 20px;
+
+    &__title {
+        color: variables.$color--black;
+        font-family: variables.$font--roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            height: 251px;
+            background: variables.$color--white;
+
+            &-img {
+                height: 174px;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+            }
+
+            &-bottom {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 77px;
+                padding: 0 15px;
+
+                &-texts {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+
+                    &-title {
+                        color: variables.$color--black;
+                        font-family: variables.$font--roboto;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+
+                    &-text {
+                        color: variables.$color--black;
+                        font-family: variables.$font--roboto;
+                        font-size: 17px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: normal;
+                    }
+                }
+
+                &-i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 22px;
+                    height: 21px;
+                    color: variables.$color--black;
+                    background: url(./../images/svg/heart.svg);
+
+                    &:hover {
+                        background: url(./../images/svg/heartFull.svg);
+                    }
+                }
+            }
+        }
+    }
+
+
+}

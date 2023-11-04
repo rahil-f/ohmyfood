@@ -1,0 +1,163 @@
+@use "variables";
+
+.menu-background {
+    background: variables.$color--background
+}
+
+.headerImage {
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    height: 275px;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: -40px;
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    background: variables.$color--background;
+    gap: 40px;
+    padding-top: 40px;
+    height: calc(100% - 40px);
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+
+        &-text {
+            color: variables.$color--black;
+            font-family: variables.$font--shrikhand;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &-img {
+            width: 22px;
+            height: 21px;
+            background: url(./../images/svg/heart.svg);
+
+            &:hover {
+                background: url(./../images/svg/heartFull.svg);
+            }
+        }
+    }
+
+    &__menus {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+
+        &-line {
+            width: 40px;
+            height: 3px;
+            background: #99E2D0;
+            margin: 0 15px;
+            margin-top: 6px;
+        }
+
+        & a {
+            width: 100%;
+        }
+
+        &-title {
+            color: variables.$color--black;
+            font-family: variables.$font--roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            text-transform: uppercase;
+            padding: 0 15px;
+        }
+
+        &-plates {
+            height: 69px;
+            width: calc(100% - 30px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            border-radius: 15.043px;
+            background: variables.$color--white;
+            box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+            gap: 8px;
+            margin: 0 15px;
+            margin-top: 12px;
+
+            &-title {
+                color: variables.$color--black;
+                font-family: variables.$font--roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                padding-left: 15px;
+            }
+
+            &-infos {
+                display: flex;
+                width: calc(100% - 30px);
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 15px;
+
+                &-info {
+                    color: variables.$color--black;
+                    font-family: variables.$font--roboto;
+                    font-size: 15.043px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                }
+
+                &-price {
+                    color: variables.$color--black;
+                    font-family: variables.$font--roboto;
+                    font-size: 15.043px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+        }
+
+
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-btn {
+            width: 58%;
+            height: 50px;
+            border-radius: 25px;
+            color: variables.$color--white;
+            background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+            border: none;
+            text-align: center;
+            font-family: variables.$font--roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+}
+.rest {
+    height: 63px !important;
+}

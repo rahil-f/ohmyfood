@@ -17,7 +17,13 @@ p {
     margin: 0px;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
 @import "header.scss";
 @import "home.scss";
 @import "howto.scss";
+@import "homeRestaurant.scss";
 @import "footer.scss";
+@import "restaurant.scss";

@@ -1,7 +1,7 @@
 @use "variables";
 
 .menu-background {
-    background: variables.$color--background
+    background: variables.$color--background;
 }
 
 .headerImage {
@@ -61,7 +61,7 @@
         &-line {
             width: 40px;
             height: 3px;
-            background: #99E2D0;
+            background: #99e2d0;
             margin: 0 15px;
             margin-top: 6px;
         }
@@ -85,55 +85,88 @@
             height: 69px;
             width: calc(100% - 30px);
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             border-radius: 15.043px;
             background: variables.$color--white;
-            box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+            box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
             gap: 8px;
             margin: 0 15px;
             margin-top: 12px;
 
-            &-title {
-                color: variables.$color--black;
-                font-family: variables.$font--roboto;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                padding-left: 15px;
-            }
-
-            &-infos {
+            &-box {
                 display: flex;
-                width: calc(100% - 30px);
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0 15px;
-
-                &-info {
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                width: calc(100% - 59px + 59px);
+                
+                &-title {
                     color: variables.$color--black;
                     font-family: variables.$font--roboto;
-                    font-size: 15.043px;
+                    font-size: 18px;
                     font-style: normal;
-                    font-weight: 300;
+                    font-weight: 500;
                     line-height: normal;
+                    padding-left: 15px;
                 }
 
-                &-price {
-                    color: variables.$color--black;
-                    font-family: variables.$font--roboto;
-                    font-size: 15.043px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
+                &-infos {
+                    display: flex;
+                    width: calc(100% - 30px);
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 15px;
+
+                    &-info {
+                        color: variables.$color--black;
+                        font-family: variables.$font--roboto;
+                        font-size: 15.043px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: normal;
+                    }
+
+                    &-price {
+                        color: variables.$color--black;
+                        font-family: variables.$font--roboto;
+                        font-size: 15.043px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                }
+
+                &:hover + .menu__menus-plates-selected {
+                    transition: width 0.4s ease-in-out;
+                    width: 59px;
+                }
+
+                &:hover + .menu__menus-plates-selected > i {
+                    transition: opacity 260ms cubic-bezier(.63,.39,1,.61);
+                    opacity: 1;
+                }
+            }
+
+            &-selected {
+                width: 0px;
+                height: 100%;
+                background: variables.$color--green;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0 15.043px 15.043px 0;
+                &-i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    color: white;
                 }
             }
         }
-
-
     }
 
     &__btn {
@@ -142,11 +175,14 @@
         align-items: center;
 
         &-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 58%;
             height: 50px;
             border-radius: 25px;
             color: variables.$color--white;
-            background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+            background: variables.$gradient--button;
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
             border: none;
             text-align: center;
@@ -155,6 +191,11 @@
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+                background: variables.$gradient--button-hover;
+            }
+            
         }
     }
 }

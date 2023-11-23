@@ -22,18 +22,44 @@
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-
+        
         &-card {
             display: flex;
             flex-direction: column;
             border-radius: 15px;
             height: 251px;
             background: variables.$color--white;
+            position: relative;
 
             &-img {
                 height: 174px;
                 object-fit: cover;
                 border-radius: 15px 15px 0 0;
+            }
+
+            &-new {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                width: 80px;
+                height: 29px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2px;
+                background: variables.$color--green;
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                color: variables.$color--green-font;
+                text-align: center;
+                font-family: variables.$font--roboto;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+
+                &-hidden {
+                    display: none;
+                }
             }
 
             &-bottom {
@@ -76,6 +102,7 @@
                     height: 21px;
                     color: variables.$color--black;
                     background: url(./../images/svg/heart.svg);
+                    transition: background 0.4s ease-in-out;
 
                     &:hover {
                         background: url(./../images/svg/heartFull.svg);

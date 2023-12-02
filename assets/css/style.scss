@@ -1,13 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap');
 
+//break point media 767 < tablet < 1024 / desktop > 1024 max width 1080
+
+html{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 body {
     margin: 0px;
     padding: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+main {
+    width: 100%;
+}
 h1,
 h2,
 h3,
@@ -21,6 +35,7 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
 @import "header.scss";
 @import "home.scss";
 @import "howto.scss";

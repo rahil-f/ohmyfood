@@ -6,73 +6,94 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     background: variables.$color--white;
     padding: 0 20px;
-
-    &__title {
-        height: 31px;
-        width: 100%;
-        color: variables.$color--black;
-        font-family: variables.$font--roboto;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+    
+    @media screen and (min-width: 1024px) {
+        height: 228px;
     }
+    &__box {
+        max-width: 1080px;
+        gap: 20px;
+        width: 100%;
 
-    &__div {
-        height: 72.379px;
-        width: 90%;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        border-radius: 20px;
-        background: variables.$color--background;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        gap: 10px;
-
-        &-circle {
-            width: 24px;
-            height: 24px;
-            position: relative;
-            left: -10px;
-            border-radius: 50%;
-            background: variables.$color--prim;
-
-            &-text {
-                width: 24px;
-                height: 24px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: variables.$color--white;
-                font-family: variables.$font--roboto;
-                font-size: 14.182px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-            }
-        }
-
-        &-i {
-            width: 13.019px;
-            height: 19.903px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: variables.$color--grey-3;
-        }
-
-        &-text {
-            height: 15.67px;
+        &-title {
+            height: 31px;
+            width: 100%;
             color: variables.$color--black;
             font-family: variables.$font--roboto;
-            font-size: 16px;
+            font-size: 24px;
             font-style: normal;
-            font-weight: 500;
+            font-weight: 700;
             line-height: normal;
+        }
+
+        &-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 20px;
+            width: 100%;
+
+            @media screen and (min-width: 1024px) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            &-box {
+                width: 100%;
+                height: 72.379px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                border-radius: 20px;
+                background: variables.$color--background;
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+                gap: 20px;
+
+                &-circle {
+                    width: 24px;
+                    height: 24px;
+                    position: relative;
+                    left: -10px;
+                    border-radius: 50%;
+                    background: variables.$color--prim;
+
+                    &-text {
+                        width: 24px;
+                        height: 24px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: variables.$color--white;
+                        font-family: variables.$font--roboto;
+                        font-size: 14.182px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                }
+
+                &-i {
+                    width: 13.019px;
+                    height: 19.903px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: variables.$color--grey-3;
+                }
+
+                &-text {
+                    height: 15.67px;
+                    color: variables.$color--black;
+                    font-family: variables.$font--roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
         }
     }
 }

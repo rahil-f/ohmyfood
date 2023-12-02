@@ -9,6 +9,13 @@
     gap: 16px;
     background: variables.$color--grey;
 
+    @media screen and (min-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        height: 114px;
+        padding: 30px 25px;
+    }
+
     &__title {
         color: variables.$color--white;
         font-family: variables.$font--shrikhand;
@@ -24,6 +31,11 @@
         align-items: flex-start;
         gap: 7px;
 
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 12px;
+        }
         &-link {
             display: flex;
             flex-direction: row;
@@ -47,6 +59,13 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
+
+            }
+            &:nth-child(-n + 2) {
+                width: 190px;
+            }
+            &:nth-last-child(-n + 2) {
+                width: 130px;
             }
         }
     }

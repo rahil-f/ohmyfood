@@ -60,7 +60,9 @@
                 @media screen and (min-width: 1024px) {
                     min-width: 450px;
                 }
-                
+                @media screen and (min-width: 1080px) {
+                    min-width: 480px;
+                }
                 &-img {
                     height: 174px;
                     object-fit: cover;

@@ -72,6 +72,17 @@
         align-items: start;
         width: 100%;
         max-width: 634px;
+        animation-duration: 1s;
+        animation-name: slidein;
+        animation-iteration-count: 1;
+        opacity: 0;
+        animation-fill-mode: forwards;
+
+        @keyframes slidein {
+            0% { opacity: 0; }
+            25%,75%  { opacity: 1; }
+            100% { opacity: 1;}
+        }
         &-line {
             width: 40px;
             height: 3px;
@@ -223,3 +234,6 @@
 .rest {
     height: 63px !important;
 }
+
+.delay-1 { animation-delay: 1s;}
+.delay-2 { animation-delay: 2s;}

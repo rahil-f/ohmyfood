@@ -14,11 +14,15 @@
         height: 63px;
         justify-content: center;
         align-items: center;
-
-        &-i {
-            position: fixed;
+        position: relative;
+        
+        & a {
+            position: absolute;
             top: 24px;
             left: 27px;
+        }
+        
+        &-i {
             height: 30px;
             width: 30px;
         }

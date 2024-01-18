@@ -129,7 +129,8 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: start;
-                width: calc(100% - 59px + 59px);
+                width: calc(100%);
+                transition: width 0.4s ease-in-out;
 
                 &-title {
                     color: variables.$color--black;
@@ -159,6 +160,7 @@
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
+                        width: 100%;
                     }
 
                     &-price {
@@ -172,6 +174,10 @@
                 }
                 &:hover + .menu__menus-plates-selected {
                     width: 59px;
+                }
+
+                &:hover {
+                    width: calc(100% - 59px);
                 }
 
                 &:hover + .menu__menus-plates-selected > i {

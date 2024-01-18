@@ -582,7 +582,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  width: calc(100% - 59px + 59px);
+  width: 100%;
+  transition: width 0.4s ease-in-out;
 }
 .menu__menus-plates-box-title {
   color: #000000;
@@ -611,6 +612,7 @@ a {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 100%;
 }
 .menu__menus-plates-box-infos-price {
   color: #000000;
@@ -622,6 +624,9 @@ a {
 }
 .menu__menus-plates-box:hover + .menu__menus-plates-selected {
   width: 59px;
+}
+.menu__menus-plates-box:hover {
+  width: calc(100% - 59px);
 }
 .menu__menus-plates-box:hover + .menu__menus-plates-selected > i {
   opacity: 1;

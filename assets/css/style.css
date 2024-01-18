@@ -621,11 +621,9 @@ a {
   line-height: normal;
 }
 .menu__menus-plates-box:hover + .menu__menus-plates-selected {
-  transition: width 0.4s ease-in-out;
   width: 59px;
 }
 .menu__menus-plates-box:hover + .menu__menus-plates-selected > i {
-  transition: opacity 260ms cubic-bezier(0.63, 0.39, 1, 0.61);
   opacity: 1;
 }
 .menu__menus-plates-selected {
@@ -636,6 +634,7 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 0 15.043px 15.043px 0;
+  transition: width 0.4s ease-in-out;
 }
 .menu__menus-plates-selected-i {
   display: flex;
@@ -643,6 +642,7 @@ a {
   align-items: center;
   opacity: 0;
   color: white;
+  transition: opacity 260ms cubic-bezier(0.63, 0.39, 1, 0.61);
 }
 .menu__btn {
   display: flex;

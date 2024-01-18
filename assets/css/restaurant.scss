@@ -77,7 +77,7 @@
         animation-iteration-count: 1;
         opacity: 0;
         animation-fill-mode: forwards;
-
+        
         @keyframes slidein {
             0% { opacity: 0; }
             25%,75%  { opacity: 1; }
@@ -130,7 +130,7 @@
                 justify-content: center;
                 align-items: start;
                 width: calc(100% - 59px + 59px);
-                
+
                 &-title {
                     color: variables.$color--black;
                     font-family: variables.$font--roboto;
@@ -170,14 +170,11 @@
                         line-height: normal;
                     }
                 }
-
                 &:hover + .menu__menus-plates-selected {
-                    transition: width 0.4s ease-in-out;
                     width: 59px;
                 }
 
                 &:hover + .menu__menus-plates-selected > i {
-                    transition: opacity 260ms cubic-bezier(.63,.39,1,.61);
                     opacity: 1;
                 }
             }
@@ -190,12 +187,14 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 0 15.043px 15.043px 0;
+                transition: width 0.4s ease-in-out;
                 &-i {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     opacity: 0;
                     color: white;
+                    transition: opacity 260ms cubic-bezier(.63,.39,1,.61);
                 }
             }
         }
